@@ -82,6 +82,12 @@
         <div>
             <h1 class="total_deg">Total Price : ${{$total_price}}</h1>
         </div>
+        <div>
+            <h1 style="font-size: 25px; padding-bottom: 15px;">Proceed to Order</h1>
+            <a href="" class="btn btn-danger">Cash On Delivery</a>
+            <a href="" class="btn btn-danger">Pay Using Card</a>
+        </div>
+            
       </div>  
 
       
