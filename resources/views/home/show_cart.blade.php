@@ -71,16 +71,16 @@
             <tr>
                 <td>{{$cart->product_title}}</td>
                 <td>{{$cart->quantity}}</td>
-                <td>{{$cart->price}}</td>
+                <td>${{$cart->price}}</td>
                 <td><img class="img_deg" src="/product/{{$cart->image}}"></td>
-                <td><a class="btn btn-danger" href="">Remove Product</td>
+                <td><a class="btn btn-danger" onclick="return confirm('Are you sure to remove this product ?')" href="{{url('remove_cart', $cart->id)}}">Remove Product</td>
             </tr>
-            <?php $total_price =+ $cart->price ?>
+            <?php $total_price += $cart->price ?>
             @endforeach
         </table>    
 
         <div>
-            <h1 class="total_deg">Total Price : {{$total_price}}</h1>
+            <h1 class="total_deg">Total Price : ${{$total_price}}</h1>
         </div>
       </div>  
 
